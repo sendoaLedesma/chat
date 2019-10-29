@@ -1,19 +1,12 @@
 {
-  "posts": [
+  "usuarios": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "nick": "Sendoa"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "nick":"Alcalino"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
