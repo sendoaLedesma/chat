@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SalaComponent } from './sala/sala.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

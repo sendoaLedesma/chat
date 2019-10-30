@@ -16,11 +16,26 @@ export class ChatService {
   constructor(private http: HttpClient) { }
 
 
+  getUsuarioById(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(this.url+ id).pipe(
+      catchError(
+        (err, caught) => {
+          alert(`Ha habido un error en la petición de usuario con id ${id}: ` + err.message);
+          console.warn(err);
+          console.warn(caught);
+          const usuario: Usuario = { id: 0, nick: ''};
+          return of(usuario);
+        }
+      )
+    );
+  }
+
+
   getUsuarioByName(nick: string): Observable<Usuario> {
     return this.http.get<Usuario>(this.url+'?nick=' + nick).pipe(
       catchError(
         (err, caught) => {
-          alert(`Ha habido un error en la petición de la tarea ${nick}: ` + err.message);
+          alert(`Ha habido un error en la petición de  usuario ${nick}: ` + err.message);
           console.warn(err);
           console.warn(caught);
           const usuario: Usuario = { id: 0, nick: ''};

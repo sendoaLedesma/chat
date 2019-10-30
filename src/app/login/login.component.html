@@ -2,10 +2,12 @@
 
    <div class="col-sm-6 border border-primary h-75">
         <h2 class="pt-2">Login</h2>
-        <div class="col-sm-12 pt2">
-            <input type="text" [(ngModel)]="usuario.nick" required  placeholder="Introduce tu nickname"/><br>
-            <button class="btn btn-primary mt-1" (click)="getUsuario()" [disabled]="usuario.nick == null || usuario.nick.trim()==''" type="submit" routerLink="/chat/salas">Login</button>
-        </div>
+        <form>
+          <div class="col-sm-12 pt2">
+            <input type="text" name="nick" [(ngModel)]="usuario.nick" required  placeholder="Introduce tu nickname"/><br>
+            <button class="btn btn-primary mt-1" (click)="validarUsuario()" [disabled]="usuario.nick == null || usuario.nick.trim()==''" type="submit" >Login</button>
+         </div>
+        </form>
     </div>
 
  </div>
